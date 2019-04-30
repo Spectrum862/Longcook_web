@@ -1,15 +1,14 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+const app = express()
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.set('views', path.join(__dirname, 'views'));
+  app.use("/CSS",express.static("CSS"));
+  app.set('view engine', 'ejs');
 
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .use("/CSS",express.static("CSS"))
-  .set('view engine', 'ejs')
-
-  .get("/",function(req,res){
+  app.get("/",function(req,res){
     res.render("login");
   })
   
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
