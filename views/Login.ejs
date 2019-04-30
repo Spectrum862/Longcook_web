@@ -12,14 +12,14 @@
         <div class="col-lg-2 col-xl-4"></div>
         <div class="col-md-12 col-lg-8 col-xl-4">
             <div class="text-center">
-                <a href="home.html"><h1 id="logo" class="text-white ">LongCook</h1></a>
-                <input class="form-style1 text-white" type="email"  placeholder="Username">
-                <input class="form-style1 text-white" type="password"  placeholder="Password">
-                <button class="btn bg-white formbutton">Login</button>
-                <a href="" class="text-white">Forgot your password?</a>
-                Don't have an account? <a href="Signup.html" class="text-white">Sign up</a>
-                
-               
+                <form action="/login" method="post">
+                    <a href="home.html"><h1 id="logo" class="text-white ">LongCook</h1></a>
+                    <input class="form-style1 text-white" type="email"  placeholder="Username" name="id" required>
+                    <input class="form-style1 text-white" type="password"  placeholder="Password" name="pass" required>
+                    <button class="btn bg-white formbutton">Login</button>
+                    <a href="" class="text-white">Forgot your password?</a>
+                    Don't have an account? <a href="/views/Signup.ejs" class="text-white">Sign up</a>
+                </form>           
             </div>
         </div>
         <div class="col-lg-2 col-xl-4"></div>
