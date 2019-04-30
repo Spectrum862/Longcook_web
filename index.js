@@ -8,11 +8,11 @@ const app = express();
   app.use("/CSS",express.static("CSS"));
   app.set('view engine', 'ejs');
 
-  app.get("/",function(req,res){
-    res.render("Login");
+  app.get("/login",function(req,res){
+    res.render("login");
   });
 
-  app.get("/Signup",function(req,res){
+  app.get("/signup",function(req,res){
     res.render("Signup");
   });
   
