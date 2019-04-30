@@ -1,0 +1,85 @@
+.login{
+    height : vmax;
+    background-color:#F07D72 ;
+    font-family: 'Prompt', sans-serif;
+    color: white
+}
+
+.text-white{
+    color: white;
+}
+
+
+#logo{
+    font-family: 'Grand Hotel', cursive;
+    font-size: 5rem;  
+}
+
+#nav-logo{
+    color:#F07D72 ;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 2rem;  
+}
+
+
+
+#logo:hover{
+    text-decoration: unset;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.center{
+    padding: auto;
+    width :100%;
+    border: 3px solid green;
+}
+
+.form{
+    padding: 24vh 5vw 0px 5vw;
+}
+
+.form-style1{
+    width : 100%;
+    height: 2.3rem;
+    border: none;
+    border-bottom: 0.2rem solid white;
+    background-color: transparent;
+    margin-top : 2vh; 
+}
+
+::placeholder{
+    color:white;
+}
+::-ms-input-placeholder{
+    color: white;
+}
+
+.formbutton{
+    width: 100%;
+    margin-top:3vh;
+    color:#F07D72;
+}
+
+.formbutton:hover{       
+    color: rgb(189, 84, 75);
+   
+}
+
+.bg-white{
+    background-color: white;
+}
+
+button + a{
+    display: block;
+    margin-top:2vh;
+}
+
+.mgtop{
+    margin-top: 2vh;
+}
+
+
