@@ -7,7 +7,7 @@ const app = express();
   app.set('views', path.join(__dirname, 'views'));
   app.use("/CSS",express.static("CSS"));
   app.set('view engine', 'ejs');
-  app.use("/views",express.static("views"));
+
 
   app.get("/login",function(req,res){
     res.render("login");
