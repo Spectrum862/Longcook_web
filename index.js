@@ -8,7 +8,7 @@ const app = express()
   app.set('view engine', 'ejs');
 
   app.get("/",function(req,res){
-    res.render("login");
+    res.send("Hello Ja");
   })
   
   app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
