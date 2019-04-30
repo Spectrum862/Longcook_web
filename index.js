@@ -9,7 +9,7 @@ const app = express();
   app.set('view engine', 'ejs');
 
   app.get("/login",function(req,res){
-    res.render("login");
+    res.render("Login");
   });
 
   app.get("/signup",function(req,res){
