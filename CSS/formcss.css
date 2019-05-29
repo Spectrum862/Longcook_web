@@ -7,6 +7,11 @@
     background: linear-gradient(90deg, rgba(240,125,112,1) 0%, rgba(255,233,184,1) 100%);
 }
 
+#inputGroupSelect01{
+    color: #F07D72;
+    margin-top: 2rem;
+}
+
 .bg-pan-right{-webkit-animation:bg-pan-right 8s both;animation:bg-pan-right 8s both}
 
 @-webkit-keyframes bg-pan-right{0%{background-position:0 50%}100%{background-position:100% 50%}}@keyframes bg-pan-right{0%{background-position:0 50%}100%{background-position:100% 50%}}

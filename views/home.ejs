@@ -1,9 +1,18 @@
-  <%- include partials/Head.ejs %>
+	<%- include partials/Head.ejs %>
+
   <title>Home</title>
 </head>
 <body>
     <section class="banner" id="home">
-			<%- include partials/nav.ejs %>
+			<% if(authen===true){ %>
+				<% include partials/navs.ejs %>
+			<% } %>
+			<% if(authen===false) { %>
+			<% include partials/nav.ejs %>
+			<% } %>
+			<% console.log(authen)%>
+
+			
       <div class="container text-white">
 				<div class="row" style="height: 80vh">
 					<div class="col-xl-6 col-md-8 my-auto fade-in-bottom">
