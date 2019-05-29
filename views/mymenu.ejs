@@ -1,0 +1,46 @@
+<%- include partials/Head.ejs %>
+<title>RecipeList</title>
+</head>
+<body>
+<section class="recipelist">
+    <%- include partials/navbar.ejs %>
+    <div class="container text-white">
+        <div class="row" style="height: 20vh">
+            <div class="col-12 text-center my-auto fade-in-bottom">
+                <h1 class="topic">MY RECIPES</h1>                 
+            </div>
+        </div>
+    </div>        
+</section>
+<%- include partials/recipeslick.ejs %>
+<article></article>
+<article class="content">
+<div class="row">
+<% for(let i=0;i< blog.length;i++){ %>
+    <div class="col-xl-4 col-md-6 col-12">
+        <a href="/menu/<%= blog[i].id %>" id="recipelink">
+        <div class="container" id="recipe">
+            <div class="container-fluid">
+                <img class="profile-img"src="<%= blog[i].pfimg %>" height="100%" width="100%">
+                <h5><%= blog[i].ownername %></h5>
+            </div>
+            <img src="<%= blog[i].img %>" class="img-fluid">				
+            <div class="container-fluid">
+                <h4><%= blog[i].title  %></h4>
+                <p><%= blog[i].des.substring(0,30) %></p>
+                <div class="d-flex flex-row-reverse">
+                        <i class="fas fa-heart"></i>
+                        <div class="ymid"><h6><%= blog[i].like %></h6></div>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                        <div class="datedes"><%= blog[i].created.getDate() +"/"+ blog[i].created.getMonth() +"/"+ blog[i].created.getFullYear() %></div>
+                </div>
+                <hr>
+            </div>						
+        </div>
+        </a>
+    </div>
+<%  } %>
+</div>
+</article>
+<%- include partials/Foot.ejs %>

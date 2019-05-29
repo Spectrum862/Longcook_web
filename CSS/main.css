@@ -94,6 +94,48 @@ h1{
     color: #929292;
 }
 
+.edit{
+    font-size: 4rem;
+    color: #F07D72;
+    text-decoration: none;
+    margin-left : 1rem; 
+}
+
+.edit a{
+    text-decoration: none;
+}
+
+#menu h4{
+    transition: 0.3s;
+}
+
+#menu{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    margin-top:2rem; 
+}
+
+#menu p{
+    color:#929292;
+}
+
+#menu img{
+    height: vmax;
+    width: 100%;
+}
+
+#menu h5{
+    display: inline;
+    vertical-align:middle;
+}
+
+#menu .container-fluid{
+    background-color:white;
+    padding: 1rem 1rem 1rem 1rem; 
+
+}
+
 #recipelink{
     text-decoration: none;
     color: inherit;
@@ -140,8 +182,13 @@ h1{
     max-width: 2rem;
 }
 
-.fa-heart{
+.fa-heart, .fa-edit{
     color:#F07D72;
+    text-decoration: none;
+}
+
+.fa-trash-alt{
+    color: rgb(255, 0, 98);
 }
 
 .fa-comment{

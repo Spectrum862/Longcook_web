@@ -18,8 +18,8 @@
     <div class="row">
     <% for(let i=0;i< blog.length;i++){ %>
         <div class="col-xl-4 col-md-6 col-12">
-            <a href="/blog/:<%= blog[i].id %>" id="recipelink">
-            <div href="/"class="container" id="recipe">
+            <a href="/menu/<%= blog[i].id %>" id="recipelink">
+            <div class="container" id="recipe">
                 <div class="container-fluid">
                     <img class="profile-img"src="<%= blog[i].pfimg %>" height="100%" width="100%">
                     <h5><%= blog[i].ownername %></h5>
@@ -27,7 +27,7 @@
                 <img src="<%= blog[i].img %>" class="img-fluid">				
                 <div class="container-fluid">
                     <h4><%= blog[i].title  %></h4>
-                    <p><%= blog[i].des %>></p>
+                    <p><%= blog[i].des.substring(0,30) %></p>
                     <div class="d-flex flex-row-reverse">
                             <i class="fas fa-heart"></i>
                             <div class="ymid"><h6><%= blog[i].like %></h6></div>

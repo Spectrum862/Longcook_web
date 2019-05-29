@@ -1,0 +1,50 @@
+<%- include partials/Head.ejs %>
+<title>RecipeList</title>
+</head>
+<body>
+<section class="recipelist">
+    <%- include partials/navbar.ejs %>
+  
+    <div class="container text-white">
+        <div class="row" style="height: 20vh">
+            <div class="col-12 text-center my-auto fade-in-bottom">
+                <h1 class="topic"><%= blog.title  %></h1>
+                <p><%= blog.des %></p>                 
+            </div>
+        </div>
+    </div>        
+</section>
+<article></article>
+<article class="content">
+        <div class="container " id="menu">
+            <div class="container-fluid">
+                <img class="profile-img"src="<%= blog.pfimg %>" height="100%" width="100%">
+                <h5><%= blog.ownername %></h5>
+            </div>
+            <img src="<%= blog.img %>" class="img-fluid">				
+            <div class="container-fluid">
+                <h4>Ingredients</h4>
+                <p><%= blog.ingredients %></p>
+                <h4>How to cook</h4>
+                <p><%= blog.howto %></p>
+                <div class="d-flex flex-row-reverse">
+                        <i class="fas fa-heart"></i>
+                        <div class="ymid"><h6><%= blog.like %></h6></div>
+                </div>
+                <div class="d-flex flex-row-reverse">
+                        <div class="datedes"><%= blog.created.getDate() +"/"+ blog.created.getMonth() +"/"+ blog.created.getFullYear() %></div>
+                </div>
+                <%if(authen===true){ %>
+                <% if (blog.owner === ownerid){%>
+                <div class="d-flex flex-row-reverse">
+                        <a href="/edit/<%= blog.id %>" class="edit"><i class="fas fa-edit"></i></a>
+                        <a href="/delete/<%= blog.id %>" class="edit"><i class="fas fa-trash-alt"></i></a>                          
+                </div>
+                <%}%>
+                <%}%>
+                <hr>
+            </div>						
+        </div>
+
+</article>
+<%- include partials/Foot.ejs %>

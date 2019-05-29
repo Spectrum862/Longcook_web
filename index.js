@@ -39,26 +39,38 @@ let express               = require("express"),
       res.render("home",{authen:true,name:req.user.name});
     }
     else res.render("home",{authen:false});
-
   });
   
+  app.get("/mymenu",isLoggedIn,function(req,res){
+    blog.find({owner:req.user.id}).then(function(blogfetch){
+      if(req.isAuthenticated()){
+        res.render("mymenu",{authen:true,name:req.user.name, blog:blogfetch});
+      }
+    });
+  });
+
+  app.get("/menu/:id",function(req,res){
+    console.log(req.params.id);
+    blog.findOne({_id:req.params.id}).then(function(blogfetch){
+      if(req.isAuthenticated()){
+        res.render("menu",{authen:true,name:req.user.name, blog:blogfetch,ownerid:req.user.id});
+      }
+      else res.render("menu",{authen:false,blog:blogfetch});
+    });
+  });
 
   app.get("/recipelist",function(req,res){
-
     blog.find().then(function(blogfetch){
       if(req.isAuthenticated()){
         res.render("list",{authen:true,name:req.user.name, blog:blogfetch});
       }
       else res.render("list",{authen:false,blog:blogfetch});
     })
-    
+
   });
 
   app.get("/addrecipe",isLoggedIn,function(req,res){
-    if(req.isAuthenticated()){
       res.render("addrecipe",{authen:true,name:req.user.name});
-    }
-    else res.render("addrecipe",{authen:false});
   });
 
   app.post("/addrecipe",function(req,res){
@@ -79,6 +91,20 @@ let express               = require("express"),
     });
     res.redirect("/");
   });
+
+  app.get("/edit/:id",isLoggedIn,function(req,res){
+      res.render("edit",{authen:true,name:req.user.name});
+  });
+
+  app.get("/delete/:id", function(req, res){
+    blog.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            res.redirect("/recipelist");
+        } else {
+            res.redirect("/recipelist");
+        }
+    })
+ });
 
   app.post("/search",function(req,res){
 
