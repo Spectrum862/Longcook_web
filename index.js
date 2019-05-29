@@ -18,7 +18,7 @@ const app = express();
   });
 
   app.get("/",function(req,res){
-    res.render("Home");
+    res.render("home");
   });
 
   app.get("/Recipelist",function(req,res){
