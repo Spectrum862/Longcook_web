@@ -1,0 +1,187 @@
+body{
+    font-family: 'Mitr', sans-serif;
+}
+
+h1{
+ font-weight: bold;
+}
+
+.bg1{
+    background-color: blanchedalmond;
+}
+.logo{
+    height: 4rem;
+}
+
+.logo-text{
+    /* color:#F07D72 ; */
+    font-family: 'Grand Hotel', cursive;
+}
+
+.nav-logo{
+    background: transparent;
+}
+
+.logo-color{
+    color: #F07D72;
+}
+
+
+.text-white{
+    color: white;
+}
+
+.banner{
+    background-image: url("/img/Head.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+#longcook{
+    background-image: url("/img/longcook.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.recipelist{
+    background-image: url("/img/recipe.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 40vh;
+}
+
+.btn-banner{
+    background-color: #F07D72;
+    color: white;
+    padding: 1rem 3vh 1rem 3vh;
+    border-radius: 10vh;
+    transition: 0.3s;
+    border: 0px solid wheat;
+}
+
+.btn-banner h6{
+    margin:0
+}
+
+
+.content{
+    padding: 6rem 0 6rem 0;
+}
+
+#recipe h4{
+    transition: 0.3s;
+}
+
+#recipe{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    margin-top:2rem; 
+}
+
+#recipe p{
+    color:#929292;
+}
+
+#recipe img{
+    height: 15rem;
+    width: 100%;
+}
+
+#recipe h5{
+    display: inline;
+    vertical-align:middle;
+}
+
+#recipe .container-fluid{
+    background-color:white;
+    padding: 1rem 1rem 1rem 1rem; 
+
+}
+
+.searchinput{
+    width: 100%;
+}
+
+.profile-img{
+    border-radius: 50%;
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+.fa-heart{
+    color:#F07D72;
+}
+
+.fa-comment{
+    color: dodgerblue;
+}
+
+.slick-block{
+    margin-left : 2rem;
+    margin-right: 2rem ;
+}
+
+.slick{
+    padding-top: 3rem;
+    padding-bottom:  3rem;
+}
+
+.slick-icon{
+    font-size: 5rem;
+    display: block;
+}
+
+
+article:nth-child(2n) {
+    background: rgb(247, 247, 247);
+}
+
+.topic{
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 900 !important;
+    font-size: 40px;
+
+}
+
+.fade-in-bottom{-webkit-animation:fade-in-bottom 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-bottom 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
+
+@-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+@media only screen and (min-width:901px){
+    #recipe:hover h4{
+        color: #F07D72;
+        transition: 0.3s;
+    }
+    
+    #recipe:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn-banner:hover{
+        border: 3px solid #F07D72;
+        background-color: transparent;
+        transition: 0.3s;
+        color: #F07D72;
+        padding: 3vh 5vh 3vh 5vh;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+
+}
+
+.footer{
+    height: 30vh;
+    background: #131313;
+}

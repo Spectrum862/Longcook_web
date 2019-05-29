@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>  
-    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
-    <link href="CSS/formcss.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <%- include partials/Headform.ejs %>
     <title>LongCooklogin</title>
 </head>
-<body class="login">
+<body class="login bg-pan-right">
     <div class="row form">
         <div class="col-lg-2 col-xl-4"></div>
         <div class="col-md-12 col-lg-8 col-xl-4">
             <div class="text-center">
                 <form action="/login" method="post">
-                    <a href="home.html"><h1 id="logo" class="text-white ">LongCook</h1></a>
-                    <input class="form-style1 text-white" type="email"  placeholder="Username" name="id" required>
+                    <a href="/" id="logo2"><h1 id="logo" class="text-white ">LongCook</h1></a>
+                    <input class="form-style1 text-white" type="email"  placeholder="Username" name="id" required autocomplete="off">
                     <input class="form-style1 text-white" type="password"  placeholder="Password" name="pass" required>
                     <button class="btn bg-white formbutton">Login</button>
                     <a href="" class="text-white">Forgot your password?</a>
