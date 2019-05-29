@@ -1,0 +1,62 @@
+<%- include partials/Head.ejs %>
+<title>RecipeList</title>
+</head>
+<body>
+<section class="recipelist">
+    <%- include partials/navbar.ejs %>
+    <div class="container text-white">
+        <div class="row" style="height: 20vh">
+            <div class="col-12 text-center my-auto fade-in-bottom">
+                <h1 class="topic">ADD RECIPES</h1>                 
+            </div>
+        </div>
+    </div>        
+</section>
+<article>
+    <div class="container content ">
+    <form action="/addrecipe" method="POST">
+        <!-- <div class="form-group">
+            <input type="file" class="btn btn-secondary btn-lg btn-block" >
+        </div> -->
+        <div class="form-group">
+            <label for="formInput">IMG URL</label>
+            <input type="text" class="form-control" id="formInput" placeholder="" required name="img">
+        </div>
+
+        <div class="form-group">
+            <label for="formInput">Name Menu</label>
+            <input type="text" class="form-control" id="formInput" placeholder="" required name="title">
+        </div>
+
+        <select class="custom-select" id="inputGroupSelect01" name="type" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="ทอด">ทอด</option>
+            <option value="ต้ม">ต้ม</option>
+            <option value="ยำ">ยำ</option>
+            <option value="สลัด">สลัด</option>
+            <option value="ผัด">ผัด</option>
+            <option value="ขนมหวาน">ขนมหวาน</option>
+            <option value="อื่น">อื่นๆ</option>
+        </select> 
+        
+        <div class="form-group">
+            <br>
+            <label for="formInput2">Ingredients</label>
+            <textarea class="form-control" id="formInput2" rows="5" name="ingredients"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="formInput3">Step to cook</label>
+            <textarea class="form-control" id="formInput3" rows="5" name="howto"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="formInput3">Description</label>
+            <textarea class="form-control" id="formInput3" rows="5" name="des"></textarea>
+        </div>
+        <div class="container" align="center" >
+            <button class="btn-banner"> Post!!! </button>
+        </div>
+    </form>			
+</div>
+</article>
+
+<%- include partials/Foot.ejs %>

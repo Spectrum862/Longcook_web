@@ -10,9 +10,16 @@
       <div class="navbar-nav ml-auto">
         <a class="nav-item nav-link" href="/Recipelist">Recipe</a>
         <a class="nav-item nav-link" href="">Longcook</a>
-        <a class="nav-item nav-link" href="/profile">Welcome <%= name %></a>
-        <a class="nav-item nav-link" href="/logout">Logout</a>
-
+        <a class="nav-item nav-link" href="/addrecipe">AddRecipe</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Welcome <%= name %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/profile">Profile</a>
+            <a class="dropdown-item" href="/logout">Logout</a>
+          </div>
+        </div>
       </div>
     </div>
   </div> 

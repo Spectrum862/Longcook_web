@@ -1,12 +1,17 @@
 let mongoose = require("mongoose");
 
 let blogSchema = new mongoose.Schema({
-    owner: Object,
+    owner: String,
+    ownername : String,
+    img: String,
+    pfimg: String,
     title: String,
+    des:String,
     type: String,
     ingredients: String,
-    loogflag: {type: Boolean, default: false},
+    longflag: {type: Boolean, default: false},
     howto: String,
+    like: {type: Number,default:0},
     created: {type: Date, default: Date.now}
 });
 

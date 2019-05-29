@@ -7,6 +7,11 @@
     background: linear-gradient(90deg, rgba(240,125,112,1) 0%, rgba(255,233,184,1) 100%);
 }
 
+.ban-bg{
+    background: rgb(240,125,112);
+    background: linear-gradient(90deg, rgba(240,125,112,1) 0%, rgba(255,233,184,1) 100%);
+}
+
 #inputGroupSelect01{
     color: #F07D72;
     margin-top: 2rem;

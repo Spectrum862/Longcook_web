@@ -8,11 +8,13 @@
             <div class="text-center">
                 <form action="/register" method="POST">
                     <h1  class="text-white">Sign up</h1>
+                    <input class="form-style1 text-white" type="text"  placeholder="Profile-img" autocomplete="off" name="" required>
                     <input class="form-style1 text-white" type="text"  placeholder="Username" autocomplete="off" name="username" required>
                     <input class="form-style1 text-white" type="password"  placeholder="Password" name="password" required>
                     <input class="form-style1 text-white" type="password"  placeholder="Re-password" name="repass" required>
                     <input class="form-style1 text-white" type="text"  placeholder="Name" name="name" required>
                     <select class="custom-select" id="inputGroupSelect01" name="gender" required>
+                            <option disabled selected value> -- select an option -- </option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
                     </select> 
