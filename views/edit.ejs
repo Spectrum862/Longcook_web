@@ -14,21 +14,21 @@
 </section>
 <article>
     <div class="container content ">
-    <form action="/addrecipe" method="POST">
+    <form action="/edit/<%= blogid %>" method="POST">
         <!-- <div class="form-group">
             <input type="file" class="btn btn-secondary btn-lg btn-block" >
         </div> -->
         <div class="form-group">
             <label for="formInput">IMG URL</label>
-            <input type="text" class="form-control" id="formInput" placeholder="" required name="img">
+            <input type="text" class="form-control" id="formInput" placeholder="" name="img">
         </div>
 
         <div class="form-group">
             <label for="formInput">Name Menu</label>
-            <input type="text" class="form-control" id="formInput" placeholder="" required name="title">
+            <input type="text" class="form-control" id="formInput" placeholder="" name="title">
         </div>
 
-        <select class="custom-select" id="inputGroupSelect01" name="type" required>
+        <select class="custom-select" id="inputGroupSelect01" name="type">
             <option disabled selected value> -- select an option -- </option>
             <option value="ทอด">ทอด</option>
             <option value="ต้ม">ต้ม</option>

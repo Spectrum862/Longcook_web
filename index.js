@@ -66,7 +66,15 @@ let express               = require("express"),
       }
       else res.render("list",{authen:false,blog:blogfetch});
     })
+  });
 
+  app.get("/recipelist/:filter",function(req,res){
+    blog.find({type:req.params.filter}).then(function(blogfetch){
+      if(req.isAuthenticated()){
+        res.render("list",{authen:true,name:req.user.name, blog:blogfetch});
+      }
+      else res.render("list",{authen:false,blog:blogfetch});
+    })
   });
 
   app.get("/addrecipe",isLoggedIn,function(req,res){
@@ -93,7 +101,59 @@ let express               = require("express"),
   });
 
   app.get("/edit/:id",isLoggedIn,function(req,res){
-      res.render("edit",{authen:true,name:req.user.name});
+      res.render("edit",{authen:true,name:req.user.name,blogid:req.params.id});
+  });
+
+  app.post("/edit/:id",isLoggedIn,function(req,res){
+    console.log("to edit");
+    let query = {id:req.params.id};
+    blog.findOne({_id:req.params.id}).then(function(blogfetch){
+      console.log(query);
+      let newtitle;
+      if(req.body.title) newtitle = req.body.title;
+      else newtitle = blogfetch.title;
+      
+      let newtype;
+      if(req.body.type) newtitle = req.body.type;
+      else newtype = blogfetch.type;
+
+      let newingredients;
+      if(req.body.ingredients) newingredients = req.body.ingredients;
+      else newingredients = blogfetch.ingredients;
+
+      let newhowto;
+      if(req.body.howto) newhowto = req.body.howto;
+      else newhowto = blogfetch.howto;
+
+      let newdes;
+      if(req.body.des) newdes = req.body.des;
+      else newdes = blogfetch.des;
+
+      let newimg;
+      if(req.body.img){
+        console.log("to loop");
+        newimg = req.body.img;
+      } 
+      else newimg = blogfetch.img;
+      blogfetch.updateOne({  
+                              title: newtitle,  
+                              type:newtype,  
+                              ingredients:newingredients,  
+                              howto:newhowto,
+                              owner:req.user.id,
+                              ownername:req.user.name,
+                              pfimg:req.user.pfimg,
+                              des:newdes,
+                              img:newimg
+      }, function (err) {
+          if (err) {
+              console.log(err);
+              return;
+          } else {
+              res.redirect("/"); //wrong route
+          }
+      });      
+    });
   });
 
   app.get("/delete/:id", function(req, res){
