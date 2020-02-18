@@ -166,11 +166,6 @@ let express               = require("express"),
     })
  });
 
-  app.post("/search",function(req,res){
-
-  });
-
-
   // Auth Routes
 
   //show sign up form
